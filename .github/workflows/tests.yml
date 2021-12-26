@@ -34,8 +34,6 @@ jobs:
       - run: brew tap juliosaraiva/core
       - run: brew style --fix juliosaraiva/core
       - run: brew test-bot --only-tap-syntax --tap juliosaraiva/core
-      - run: brew test-bot --only-formulae-detect --tap juliosaraiva/core
-        id: formulae-detect
 
   setup_tests:
     runs-on: ubuntu-latest

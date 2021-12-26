@@ -6,10 +6,6 @@ class Pyroscope < Formula
   license "Apache-2.0"
   head "https://github.com/pyroscope-io/pyroscope.git", branch: "main"
 
-  bottle do
-    sha256 cellar: :any_skip_relocation, all:  "a5f138a04a7a3b31c9e693370d9c214e3a6724fe14fbe123f8b7adc4ae28aff3"
-  end
-
   depends_on "go" => :build
   depends_on "node" => :build
   depends_on "rust" => :build
