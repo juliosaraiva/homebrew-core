@@ -13,11 +13,7 @@ class Pyroscope < Formula
   depends_on "zstd" => :build
 
   def install
-    if RUBY_PLATFORM == "arm64-darwin20"
-      system({ "ARCH" => "aarch64" }.to_s, "make", "build-rust-dependencies")
-    else
-      system "make", "build-rust-dependencies"
-    end
+    system "make", "build-rust-dependencies"
     system "make", "install-build-web-dependencies"
     system "make", "build-release"
 

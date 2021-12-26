@@ -18,6 +18,7 @@ concurrency:
 jobs:
   tap_syntax:
     runs-on: ubuntu-latest
+    if: false
     container:
       image: ghcr.io/homebrew/ubuntu16.04:master
     env:
@@ -176,11 +177,6 @@ jobs:
     strategy:
       matrix:
         include:
-          - runner: '12-arm64'
-          - runner: '12'
-          - runner: '11-arm64'
-          - runner: '11'
-          - runner: '10.15'
           - runner: ${{needs.setup_tests.outputs.linux-runner}}
             container: ${{fromJson(needs.setup_tests.outputs.container)}}
             workdir: /github/home
