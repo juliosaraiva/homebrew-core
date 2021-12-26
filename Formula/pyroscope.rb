@@ -12,6 +12,10 @@ class Pyroscope < Formula
   depends_on "yarn" => :build
   depends_on "zstd" => :build
 
+  if OS.linux?
+    depends_on "libunwind" => :build
+  end
+
   def install
     system "make", "build-rust-dependencies"
     system "make", "install-build-web-dependencies"
