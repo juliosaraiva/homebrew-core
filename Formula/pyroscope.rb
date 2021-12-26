@@ -9,9 +9,12 @@ class Pyroscope < Formula
   bottle do
     root_url "https://dl.pyroscope.io/homebrew"
 
-    sha256 cellar: :any_skip_relocation, arm64_big_sur: "b12a5b227198032bb68f1d0a84ca311b80ce5661d58f32b00aeb921d01aa5cf4"
-    sha256 cellar: :any_skip_relocation, catalina:      "b28ad12859784edef72ee4261d27eccb924ac00c3a94940e3b7585a620e16c34"
-    sha256 cellar: :any_skip_relocation, mojave:        "b28ad12859784edef72ee4261d27eccb924ac00c3a94940e3b7585a620e16c34"
+    sha256 cellar: :any_skip_relocation, arm64_big_sur:  "b12a5b227198032bb68f1d0a84ca311b80ce5661d58f32b00aeb921d01aa5cf4"
+    sha256 cellar: :any_skip_relocation, arm64_monterey: "b12a5b227198032bb68f1d0a84ca311b80ce5661d58f32b00aeb921d01aa5cf4"
+    sha256 cellar: :any_skip_relocation, monterey:       "b28ad12859784edef72ee4261d27eccb924ac00c3a94940e3b7585a620e16c34"
+    sha256 cellar: :any_skip_relocation, big_sur:        "b28ad12859784edef72ee4261d27eccb924ac00c3a94940e3b7585a620e16c34"
+    sha256 cellar: :any_skip_relocation, catalina:       "b28ad12859784edef72ee4261d27eccb924ac00c3a94940e3b7585a620e16c34"
+    sha256 cellar: :any_skip_relocation, mojave:         "b28ad12859784edef72ee4261d27eccb924ac00c3a94940e3b7585a620e16c34"
   end
 
   depends_on "go" => :build
